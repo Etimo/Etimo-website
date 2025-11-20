@@ -13,7 +13,7 @@ const LanguageSwitcher = ({ closeMenu, size }: LanguageSwitcherProps) => {
   const { isEnglish } = useLocale();
 
     const handleLanguageChange = () => {
-    const newLang = isEnglish ? LANG.SV : LANG.EN;
+        const newLang = isEnglish ? LANG.SV : LANG.EN;
     document.cookie = `${COOKIES.PREFERRED_LANG}=${newLang}; path=/; max-age=${60 * 60 * 24 * 365}`;
     closeMenu && closeMenu();
   };
