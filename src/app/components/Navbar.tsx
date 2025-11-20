@@ -69,7 +69,12 @@ export const Navbar = ({
           />
         </div>
 
-        <HamburgerButton menuOpen={menuOpen} isLoading={isLoading} onClick={toggleMenu} />
+        <div className="flex items-center gap-5">
+          <div className="hidden md:block">
+            <LanguageSwitcher size="xl" />
+          </div>
+          <HamburgerButton menuOpen={menuOpen} isLoading={isLoading} onClick={toggleMenu} />
+        </div>
       </div>
 
       <div
@@ -139,7 +144,7 @@ export const Navbar = ({
 
         <section>
           <div className="px-14 mb-6">
-            <LanguageSwitcher closeMenu={closeMenu} />
+            <LanguageSwitcher closeMenu={closeMenu} size="xl" />
           </div>
           <Contact />
         </section>

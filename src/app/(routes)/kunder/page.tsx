@@ -22,7 +22,7 @@ const CustomerPage = async () => {
   return (
     <>
       <Sidemenu items={items} />
-      <main>{page ? <PageRenderer page={page} /> : <NotFound /> }</main>
+      <main>{page ? <PageRenderer page={page} /> : <NotFound />}</main>
     </>
   );
 };

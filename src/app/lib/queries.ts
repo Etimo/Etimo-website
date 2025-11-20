@@ -145,4 +145,3 @@ export const QUERY_PAGE_SLUG = `
     }
   }
 `;
-
