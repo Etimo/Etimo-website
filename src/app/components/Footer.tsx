@@ -19,8 +19,7 @@ export const Footer = () => {
           <img
             src="/doctors-without-borders-supporter.png"
             alt="Läkare utan gränsers logga"
-            height={100}
-            width={300}
+            className="h-[100px] w-[300px] 2xl:h-[130px] 2xl:w-[400px]"
           />
         </div>
       </div>

@@ -17,13 +17,13 @@ const ConsultantCard = ({ consultant }: { consultant: CfConsultant | null }) => 
         <Image
           src={consultant.image.url}
           alt={consultant.name}
-          className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-400 group-hover:scale-105"
           loading="lazy"
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
         />
 
-        <div className="absolute inset-0 bg-cyan/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        <div className="absolute inset-0 bg-cyan/70 invisible group-hover:visible transition-all flex items-center justify-center">
           <div className="text-black text-center space-y-2 px-4">
             <h3 className="text-2xl 2xl:text-3xl font-bold">{consultant.name}</h3>
             {consultant.role && (

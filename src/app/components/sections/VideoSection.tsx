@@ -24,6 +24,8 @@ export const VideoSection = ({ section }: { section: VideoSectionType }) => {
                 playsInline
                 preload="metadata"
                 className="w-full h-auto rounded-lg"
+                autoPlay
+                muted
                 poster={video.thumbnail?.url || undefined}
               >
                 Sorry, your browser does not support embedded videos.

@@ -27,7 +27,7 @@ export const cfFetch = async <TData, TVars extends object = Record<string, unkno
         Authorization: `Bearer ${CDA_TOKEN}`,
       },
       body: JSON.stringify({ query, variables }),
-      next: { revalidate: 60 },
+      next: { revalidate: 10 },
     });
 
     if (!res.ok) {

@@ -42,10 +42,14 @@ export const Sidemenu = ({ items }: { items: SideMenuItem[] }) => {
           {items.map((it) => (
             <li key={it.id} className="m-0">
               <a
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById(it.id)?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 href={`#${it.id}`}
                 className={` 
-                font-quest block px-2 py-1 rounded-md text-[11px] mb-3
-                ${activeId === it.id ? 'text-cyan scale-120 origin-left' : 'text-[#888888]'}
+                font-quest block px-2 py-1 rounded-md text-[11px] 2xl:text-[13px] mb-2 2xl:mb-5 cursor-pointer
+                ${activeId === it.id ? 'text-cyan scale-120 2xl:scale-130 origin-left' : 'text-[#888888]'}
               `}
               >
                 {it.text}
