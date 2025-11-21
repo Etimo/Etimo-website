@@ -75,12 +75,12 @@ export function generateMetadata({
 export const pageMetadata = {
   home: {
     sv: {
-      title: 'Etimo - Din IT-partner inom digital utveckling',
+      title: 'Etimo - Bättre mjukvara för en bättre värld',
       description:
         'Etimo är ett IT-konsultbolag som levererar expertkonsulter inom systemutveckling, webbutveckling, molntjänster och AI.',
     },
     en: {
-      title: 'Etimo - Your partner in digital development',
+      title: 'Etimo - Better software for a better world',
       description:
         'Etimo is an IT consulting company delivering expert consultants in system development, web development, cloud services and AI.',
     },
