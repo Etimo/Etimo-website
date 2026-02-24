@@ -9,6 +9,7 @@ import { IoCloseSharp } from 'react-icons/io5';
 import HoverEffect from './animations/HoverEffect';
 import { HamburgerButton } from './ui/HamburgerButton';
 import { FormattedLinks } from '../lib/types';
+import { usePathname } from 'next/navigation';
 
 export const Navbar = ({
   links,
@@ -20,6 +21,8 @@ export const Navbar = ({
   const [menuOpen, setMenuOpen] = useState(false);
   const [atTop, setAtTop] = useState(true);
   const drawerRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const slug = pathname.startsWith('/en') ? '/en' : '/';
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
   const toggleMenu = () => {
@@ -62,11 +65,13 @@ export const Navbar = ({
             atTop ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <img
-            src="/etimo_logo_transparent.png"
-            alt="Etimo logo"
-            className="w-[110px] xl:w-[150px] h-auto"
-          />
+          <a href={slug}>
+            <img
+              src="/etimo_logo_transparent.png"
+              alt="Etimo logo"
+              className="w-[110px] xl:w-[150px] h-auto"
+            />
+          </a>
         </div>
 
         <div className="flex items-center gap-5">
