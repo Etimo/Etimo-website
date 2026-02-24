@@ -34,6 +34,7 @@ export const SECTION_TYPE_VARIANTS = {
   VIDEO: 'VideoSection',
   HERO: 'Hero',
   GENERIC: 'GenericSection',
+  CAROUSEL: 'CarouselSection'
 } as const;
 export type SectionTypeVariant = (typeof SECTION_TYPE_VARIANTS)[keyof typeof SECTION_TYPE_VARIANTS];
 

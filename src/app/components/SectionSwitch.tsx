@@ -5,6 +5,7 @@ import type {
   GenericSection as GenericSectionType,
   VideoSection as VideoSectionType,
   Hero as HeroSectionType,
+  CarouselSection as CarouselSectionType,
 } from '../lib/types';
 import { GenericSection } from './sections/GenericSection';
 import { GallerySection } from './sections/GallerySection';
@@ -12,6 +13,7 @@ import { ConsultantImageSection } from './sections/ConsultantSection';
 import { VideoSection } from './sections/VideoSection';
 import { Hero } from './Hero';
 import { SECTION_TYPE_VARIANTS } from '@/app/lib/constants';
+import CarouselSection from './sections/CarouselSection';
 
 export const SectionSwitch = ({
   section,
@@ -21,7 +23,8 @@ export const SectionSwitch = ({
     | ImageGallerySection
     | ConsultantSection
     | VideoSectionType
-    | HeroSectionType;
+    | HeroSectionType 
+    | CarouselSectionType;
 }) => {
   switch (section.__typename) {
     case SECTION_TYPE_VARIANTS.CONSULTANT:
@@ -35,6 +38,9 @@ export const SectionSwitch = ({
 
     case SECTION_TYPE_VARIANTS.HERO:
       return <Hero section={section} />;
+
+    case SECTION_TYPE_VARIANTS.CAROUSEL:
+      return <CarouselSection section={section}/>
 
     default:
       return <GenericSection section={section} />;

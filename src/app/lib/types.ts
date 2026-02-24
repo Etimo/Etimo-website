@@ -126,6 +126,23 @@ export type VideoSection = BaseSectionFields & {
   videoLink?: string;
 };
 
+export type CarouselSection = BaseSectionFields & {
+  __typename: typeof SECTION_TYPE_VARIANTS.CAROUSEL;
+  label?: string;
+  title?: string;
+  elementsInView?: number;
+  testimonialCollection?: {
+    items: TestimonialItem[];
+  };
+};
+
+export interface TestimonialItem {
+  text: CfRichText;
+  person?: string;
+  role?: string;
+  company?: string;
+}
+
 export type Hero = {
   __typename: typeof SECTION_TYPE_VARIANTS.HERO;
   label: string;

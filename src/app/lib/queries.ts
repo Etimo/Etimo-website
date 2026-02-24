@@ -107,6 +107,23 @@ export const QUERY_PAGE_BY_ID = `
               size
             }
           }
+            
+          ... on CarouselSection {
+            elementsInView
+            label
+            title
+          
+            testimonialCollection(limit: 20) {
+              items {
+                ... on TestimonialItem {
+                  text { json }
+                  person
+                  company
+                  role
+                }
+              }
+            }
+          }
 
           ... on Hero {
             label
