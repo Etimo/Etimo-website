@@ -9,7 +9,7 @@ The website is built with [Next.js](https://nextjs.org) and integrated with [Con
 
 ### Contentful CMS
 
-The website content is managed through Contentful, a headless CMS service. Login credentials are available in Bitwarden. A quick guide of Contentful and the setup can be found in Google Drive.
+The website content is managed through Contentful, a headless CMS service. Login credentials are available in Bitwarden. A quick guide of Contentful and the setup can be found in [Google Drive](https://docs.google.com/document/d/1ZSwFAclv4Gggi69T2sHTDyHRw1QRxHWzEmWjQ4tnD3U/edit?tab=t.0).
 
 **Content structure**:
 
